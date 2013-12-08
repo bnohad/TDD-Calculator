@@ -50,4 +50,13 @@ public class StringCalcTester {
 		//assert
 		assertEquals(3, actual);
 	}
+	
+	@Test
+	public void UnknownAmountOfNumbersCommaSeparated()
+	{
+		//act
+		actual=calc.Add("1,2,3");
+		//assert
+		assertEquals(6, actual);
+	}
 }
