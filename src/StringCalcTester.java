@@ -41,4 +41,13 @@ public class StringCalcTester {
 		//assert
 		assertEquals(3, actual);
 	}
+	
+	@Test
+	public void AddOneNumberCommaSeparated_returnNumber()
+	{
+		//act
+		actual=calc.Add("3,");
+		//assert
+		assertEquals(3, actual);
+	}
 }
