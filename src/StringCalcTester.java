@@ -6,7 +6,7 @@ import org.junit.Test;
 public class StringCalcTester {
 
 	@Test
-	public void EmptyString() 
+	public void AddEmptyString_returnZero() 
 	{
 		//arrange
 		Calculator calc=new Calculator();
@@ -15,5 +15,4 @@ public class StringCalcTester {
 		//assert
 		assertEquals(0, actual);
 	}
-
 }
