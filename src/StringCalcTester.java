@@ -39,6 +39,6 @@ public class StringCalcTester {
 		//act
 		actual=calc.Add("1,2");
 		//assert
-		assertEquals("3", actual);
+		assertEquals(3, actual);
 	}
 }
