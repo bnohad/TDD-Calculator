@@ -17,7 +17,7 @@ public class StringCalcTester {
 	}
 
 	@Test
-	public void AddEmptyString_returnZero() 
+	public void AddEmptyString_returnZero() throws Exception
 	{
 		//act
 		actual=calc.Add("");
@@ -26,7 +26,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void AddOneNumber_returnNumber()
+	public void AddOneNumber_returnNumber() throws Exception
 	{
 		//act
 		actual=calc.Add("1");
@@ -35,7 +35,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void AddTwoNumbersCommaSeparated_returnSum()
+	public void AddTwoNumbersCommaSeparated_returnSum() throws Exception
 	{
 		//act
 		actual=calc.Add("1,2");
@@ -44,7 +44,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void AddOneNumberCommaSeparated_returnNumber()
+	public void AddOneNumberCommaSeparated_returnNumber() throws Exception
 	{
 		//act
 		actual=calc.Add("3,");
@@ -53,7 +53,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void UnknownAmountOfNumbersCommaSeparated()
+	public void UnknownAmountOfNumbersCommaSeparated() throws Exception
 	{
 		//act
 		actual=calc.Add("1,2,3");
@@ -62,7 +62,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void UnknownAmountOfNumbersDoubleCommaSeparated() //solves delimiters in beginning & end of string
+	public void UnknownAmountOfNumbersDoubleCommaSeparated() throws Exception//solves delimiters in beginning & end of string
 	{
 		//act
 		actual=calc.Add("1,2,,3,4");
@@ -71,7 +71,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void CommaAndNewlineDelimiters()
+	public void CommaAndNewlineDelimiters() throws Exception
 	{
 		//act
 		actual=calc.Add("1\n2,3,4,5");
@@ -81,7 +81,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void DifferentDelimiter()
+	public void DifferentDelimiter() throws Exception
 	{
 		//act
 		actual=calc.Add("//;\n10;;3,5");
@@ -90,9 +90,9 @@ public class StringCalcTester {
 	}
 	
 	@Test(expected = Exception.class)
-	public void AddNegatives_returnException()
+	public void AddNegatives_returnException() throws Exception
 	{
 		//act
-		calc.Add("10,-5,-4");		
+		calc.Add("10,-5,-4");	
 	}
 }
