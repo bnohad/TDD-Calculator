@@ -11,14 +11,18 @@ public class Calculator {
 		if(numbers.length>1)
 			return (Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]));
 		
-		return Integer.parseInt(input);
+		return Integer.parseInt(numbers[0]);
 	}
 	
 	private String[] SplitStringToArray(String input)
 	{
 		String numbers[]=input.split(",");
 		
+//		System.out.println(input + " Num of cells: " + numbers.length);
+//		
+//		for(int i=0; i<input.length(); i++)
+//			System.out.println(numbers[i] + " ");
+		
 		return numbers;
 	}
-
 }
