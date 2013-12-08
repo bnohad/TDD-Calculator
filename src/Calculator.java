@@ -29,6 +29,8 @@ public class Calculator {
 	
 	private String[] SplitStringToArray(String input)
 	{
+		input=input.replace('\n', ',');
+		
 		String numbers[]=input.split(",");
 		
 //		System.out.println(input + " Num of cells: " + numbers.length);
