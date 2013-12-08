@@ -68,4 +68,14 @@ public class StringCalcTester {
 		//assert
 		assertEquals(10, actual);
 	}
+	
+	@Test
+	public void CommaAndNewlineDelimiters()
+	{
+		//act
+		actual=calc.Add("1\n2,3,4,5");
+		//assert
+		assertEquals(15, actual);
+		
+	}
 }
