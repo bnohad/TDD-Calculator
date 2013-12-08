@@ -9,9 +9,14 @@ public class Calculator {
 		String numbers[]=SplitStringToArray(input); //split string to array of strings
 		
 		if(numbers.length>1)
-			return (Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]));
+			return String2Int(numbers[0]) + String2Int(numbers[1]);
 		
-		return Integer.parseInt(numbers[0]);
+		return String2Int(numbers[0]);
+	}
+	
+	private int String2Int(String number)
+	{
+		return Integer.parseInt(number);
 	}
 	
 	private String[] SplitStringToArray(String input)
