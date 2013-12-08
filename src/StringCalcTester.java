@@ -12,6 +12,7 @@ public class StringCalcTester {
 	@Before
 	public void init()
 	{
+		//arrange
 		calc=new Calculator();
 	}
 
@@ -61,7 +62,7 @@ public class StringCalcTester {
 	}
 	
 	@Test
-	public void UnknownAmountOfNumbersDoubleCommaSeparated()
+	public void UnknownAmountOfNumbersDoubleCommaSeparated() //solves delimiters in beginning & end of string
 	{
 		//act
 		actual=calc.Add("1,2,,3,4");
@@ -77,5 +78,14 @@ public class StringCalcTester {
 		//assert
 		assertEquals(15, actual);
 		
+	}
+	
+	@Test
+	public void DifferentDelimiter()
+	{
+		//act
+		actual=calc.Add("//;\n10;;3,5");
+		//assert
+		assertEquals(18, actual);
 	}
 }
