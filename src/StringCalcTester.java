@@ -7,6 +7,7 @@ import org.junit.Test;
 public class StringCalcTester {
 	
 	Calculator calc;
+	int actual;
 	
 	@Before
 	public void init()
@@ -18,7 +19,7 @@ public class StringCalcTester {
 	public void AddEmptyString_returnZero() 
 	{
 		//act
-		int actual=calc.Add("");
+		actual=calc.Add("");
 		//assert
 		assertEquals(0, actual);
 	}
@@ -27,8 +28,17 @@ public class StringCalcTester {
 	public void AddOneNumber_returnNumber()
 	{
 		//act
-		int actual=calc.Add("1");
+		actual=calc.Add("1");
 		//assert
 		assertEquals(1, actual);
+	}
+	
+	@Test
+	public void AddTwoNumbersCommaSeparated_returnSum()
+	{
+		//act
+		actual=calc.Add("1,2");
+		//assert
+		assertEquals("3", actual);
 	}
 }
