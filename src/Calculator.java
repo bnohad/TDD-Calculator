@@ -37,7 +37,7 @@ public class Calculator {
 			
 			delimiter_array[0]=delimiter_array[0].substring(2); //remove '//' from string
 			
-			input=delimiter_array[1].replace(delimiter_array[0], ",");
+			input=delimiter_array[1].replace(delimiter_array[0], ","); //can set delimiter as String and not only char
 		}
 		
 		input=input.replace('\n', ',');

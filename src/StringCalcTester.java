@@ -88,4 +88,11 @@ public class StringCalcTester {
 		//assert
 		assertEquals(18, actual);
 	}
+	
+	@Test(expected = Exception.class)
+	public void AddNegatives_returnException()
+	{
+		//act
+		calc.Add("10,-5,-4");		
+	}
 }
