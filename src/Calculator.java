@@ -16,7 +16,8 @@ public class Calculator {
 		int sum=0;
 		
 		for(int i=0; i<numbers.length; i++)
-			sum+=String2Int(numbers[i]);
+			if(!numbers[i].isEmpty())
+				sum+=String2Int(numbers[i]);
 		
 		return sum;
 	}
