@@ -6,19 +6,19 @@ public class Calculator {
 		if(input.isEmpty())
 			return 0;
 		
+		return SumNumbersInString(input);
+	}
+	
+	private int SumNumbersInString(String input)
+	{
 		String numbers[]=SplitStringToArray(input); //split string to array of strings
 		
-		if(numbers.length>1)
-		{
-			int sum=0;
-			
-			for(int i=0; i<numbers.length; i++)
-				sum+=String2Int(numbers[i]);
-			
-			return sum;
-		}
+		int sum=0;
 		
-		return String2Int(numbers[0]);
+		for(int i=0; i<numbers.length; i++)
+			sum+=String2Int(numbers[i]);
+		
+		return sum;
 	}
 	
 	private int String2Int(String number)
