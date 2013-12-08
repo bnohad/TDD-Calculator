@@ -29,6 +29,17 @@ public class Calculator {
 	
 	private String[] SplitStringToArray(String input)
 	{
+		String delimiter_array[];
+		
+		if(input.startsWith("//"))
+		{
+			delimiter_array=input.split("\n", 2); //split to two cells
+			
+			delimiter_array[0]=delimiter_array[0].substring(2); //remove '//' from string
+			
+			input=delimiter_array[1].replace(delimiter_array[0], ",");
+		}
+		
 		input=input.replace('\n', ',');
 		
 		String numbers[]=input.split(",");
