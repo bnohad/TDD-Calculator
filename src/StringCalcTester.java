@@ -59,4 +59,13 @@ public class StringCalcTester {
 		//assert
 		assertEquals(6, actual);
 	}
+	
+	@Test
+	public void UnknownAmountOfNumbersDoubleCommaSeparated()
+	{
+		//act
+		actual=calc.Add("1,2,,3,4");
+		//assert
+		assertEquals(10, actual);
+	}
 }
