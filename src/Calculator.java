@@ -9,7 +9,14 @@ public class Calculator {
 		String numbers[]=SplitStringToArray(input); //split string to array of strings
 		
 		if(numbers.length>1)
-			return String2Int(numbers[0]) + String2Int(numbers[1]);
+		{
+			int sum=0;
+			
+			for(int i=0; i<numbers.length; i++)
+				sum+=String2Int(numbers[i]);
+			
+			return sum;
+		}
 		
 		return String2Int(numbers[0]);
 	}
